@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/words.css">
+    <title>Ord hittare</title>
+</head>
+<body>
+
+    <div class="leftside">
+        <h1 class="logo">Henkes JS</h1>
+        <h1 class="welcome">Välkommen! Här anger vi hur många gånger ett ord förekommer i en text</h1>
+    </div>
+    <div class="rightside">
+        <a class="menuitem1" href="#">Hem</a>
+        <a class="menuitem2" href="#">Uppgifter</a>
+        <h2 class="instruction1">Skriv in en text i rutan nedan</h2>
+        <input type="text" id="text" placeholder="Text"></input>
+        <h2 class="instruction2">Skriv in ordet du vill söka efter</h2>
+        <input type="text" id="ord" placeholder="Ord">
+        <button onclick="inskrivning()" id="button1">Sök efter ordet</button>
+        <h2 id="utskrift"></h2>
+    </div>
+
+    <script src="../js/ord.js"></script>
+</body>
+</html>

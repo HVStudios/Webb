@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="30" viewBox="0 0 104 30">
+  <g id="Group_1" data-name="Group 1" transform="translate(-3807 -371)">
+    <path id="music-solid" d="M25.239.109,8.07,5.179a1.717,1.717,0,0,0-1.2,1.637V20.842a7.458,7.458,0,0,0-1.717-.21C2.307,20.632,0,22.17,0,24.066S2.307,27.5,5.151,27.5,10.3,25.962,10.3,24.066V11.528L24.038,7.5v9.906a7.426,7.426,0,0,0-1.717-.211c-2.844,0-5.151,1.538-5.151,3.434s2.307,3.434,5.151,3.434,5.151-1.537,5.151-3.434V1.745A1.717,1.717,0,0,0,25.239.109Z" transform="translate(3807 372.47)" fill="#e51a51"/>
+    <text id="usicNet" transform="translate(3836 395)" fill="#e51a51" font-size="22" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">usicNet</tspan></text>
+  </g>
+</svg>

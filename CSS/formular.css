@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.leftside {
+    width: 60%;
+    background: linear-gradient(313.42deg, #00FFC2 -12.39%, #007D60 95.17%);
+    height: 100vh;
+    top: 0;
+}
+
+.logo {
+    color: rgb(250, 250, 250);
+    font-size: 4.5vh;
+    font-weight: 800;
+    padding-left: 11%;
+    padding-top: 2vh;
+    font-family: "Montserrat";
+    font-weight: 800;
+}
+
+.welcome {
+    color: rgb(250, 250, 250);
+    width: 46%;
+    font-size: 5vh;
+    margin-top: 32vh;
+    padding-left: 11%;
+    font-family: "Roboto";
+}
+
+.rightside {
+    top: 0px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 60%;
+    width: 40%;
+    background-color: #2C2C2C;
+}
+
+.menuitem1 {
+    position: absolute;
+    color: rgba(250, 250, 250, 0.65);
+    font-size: 4vh;
+    font-weight: 800;
+    margin-left: 25%;
+    padding-top: 2.5vh;
+    font-family: "Roboto";
+    font-weight: 800;
+    white-space: nowrap;
+    width: 5%;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.menuitem1:hover {
+    color: #00C696;
+}
+
+.menuitem2 {
+    position: absolute;
+    color: #00C696;
+    font-size: 4vh;
+    font-weight: 800;
+    margin-left: 52%;
+    padding-top: 2.5vh;
+    font-family: "Roboto";
+    font-weight: 800;
+    white-space: nowrap;
+    width: 5%;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.menuitem2:hover {
+    color: #93097D; 
+}
+
+#namn {
+    border: 0.3vh solid #00C696;
+    border-radius: 50vh;
+    width: 50%;
+    height: 4vh;
+    margin-left: 25%;
+    margin-top: 2vh;
+    font-family: "Roboto";
+    font-size: 2vh;
+    padding-left: 2%;
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
+
+#namn:focus {
+    outline: none;
+}
+
+#nummer {
+    border: 0.3vh solid #00C696;
+    border-radius: 50vh;
+    width: 50%;
+    height: 4vh;
+    margin-left: 25%;
+    margin-top: 2vh;
+    font-family: "Roboto";
+    font-size: 2vh;
+    padding-left: 2%;
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
+
+#nummer:focus {
+    outline: none;
+}
+
+#mail {
+    border: 0.3vh solid #00C696;
+    border-radius: 50vh;
+    width: 50%;
+    height: 4vh;
+    margin-left: 25%;
+    margin-top: 2vh;
+    font-family: "Roboto";
+    font-size: 2vh;
+    padding-left: 2%;
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
+
+#mail:focus {
+    outline: none;
+}
+
+#button1 {
+    background: #00C696;
+    width: 53%;
+    height: 4vh;
+    margin-left: 25%;
+    margin-top: 2vh;
+    font-family: "Roboto";
+    font-size: 2vh;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 50vh;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#button1:focus {
+    outline: none;
+}
+
+.namn {
+    font-size: 2.5vh;
+    font-family: "Roboto";
+    color: #00C696;
+    margin-left: 25%;
+    margin-top: 28vh;
+    width: 75%;
+}
+
+#felnamn {
+    font-size: 2.5vh;
+    font-family: "Roboto";
+    color: #00C696;
+    margin-left: 25%;
+    margin-top: 2vh;
+    width: 75%;
+}
+
+.nummer {
+    font-size: 2.5vh;
+    font-family: "Roboto";
+    color: #00C696;
+    margin-left: 25%;
+    margin-top: 2vh;
+    width: 75%;
+}
+
+#felnummer {
+    font-size: 2.5vh;
+    font-family: "Roboto";
+    color: #00C696;
+    margin-left: 25%;
+    margin-top: 2vh;
+    width: 75%;
+}
+
+.mail {
+    font-size: 2.5vh;
+    font-family: "Roboto";
+    color: #00C696;
+    margin-left: 25%;
+    margin-top: 2vh;
+    width: 75%;
+}
+
+#felmail {
+    font-size: 2.5vh;
+    font-family: "Roboto";
+    color: #00C696;
+    margin-left: 25%;
+    margin-top: 2vh;
+    width: 75%;
+}

@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+body {
+    background: #f2eff5;
+}
+
+.logodiv {
+    display: block;
+    width: 15vh;
+    height: 10vh;
+    margin-top: 2vh;
+    margin-left: 8vh;
+}
+
+.logo {
+    width: 15vh;
+    height: 15vh;
+}
+
+.playerwrapper {
+    display: grid;
+    border-radius: 2vh 2vh 0 0;
+    grid-template-columns: 12vh 5vh 5vh;
+    grid-template-rows: ;
+    position: fixed;
+    width: 100vw;
+    height: 12vh;
+    top: 88vh;
+    background-color: #FFFFFF;
+    box-shadow: 1px 5px 50px 5px rgba(0, 0, 0, 0.5);
+}
+
+#PlayingImg{
+    display: inline-block;
+    border-radius: 1vh;
+    width: 10vh;
+    height: 10vh;
+    margin-left: 5vh;
+    margin-top: 2.5vh;
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.76);
+}
+
+#songname {
+    margin-left: 18vh;
+    margin-top: -9.65vh;
+    font-size: 1.8rem;
+}
+
+#artist {
+    margin-left: 18vh;
+    margin-top: 1.5vh;
+    opacity: 0.87;
+    width: 25vh;
+}
+
+.playbutton {
+    margin-left: calc(50% - 2.4vh);
+    height: 4.8vh;
+    width: 4.8vh;
+    margin-top: -9vh;
+    background: linear-gradient(42.14deg, #5860FF 28.35%, #A64DFF 90.04%);
+    border-radius: 5vh;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.playbutton:hover {
+    box-shadow: 1px 1px 10px 3px #5860FF;
+}
+
+#playicon {
+    margin-left: 1.6vh;
+    margin-top: 1.4vh;
+    height: 2vh;
+    width: 2vh;
+}
+
+#prevtrack {
+    position: absolute;
+    height: 2.3vh;
+    width: 2.3vh;
+    margin-left: calc(47% - 1.15vh);
+    margin-top: -7.7vh;
+    cursor: pointer;
+}
+
+#nexttrack {
+    position: absolute;
+    height: 2.3vh;
+    width: 2.3vh;
+    margin-left: calc(53% - 1.15vh);
+    margin-top: -3.5vh;
+    cursor: pointer;
+}
+
+.duration_slider {
+  margin-left: calc(50% - 25vh);
+  margin-top: 4vh;
+  width: 60vh;
+}
+  
+  .range-slider__range {
+    -webkit-appearance: none;
+    width: 50vh;
+    height: 10px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+  .range-slider__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+            appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5860FF;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+  }
+
+  .range-slider__range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #5860FF;
+    cursor: pointer;
+    -moz-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+  }
+
+  ::-moz-range-track {
+    border: 0;
+  }
+  
+  input::-moz-focus-inner,
+  input::-moz-focus-outer {
+    border: 0;
+  }
+
+  #current_duration {
+    position: absolute;
+    margin-left: -5vh;
+  }
+
+  #total_duration {
+    position: absolute;
+    margin-left: 51vh;
+    margin-top: -2vh;
+  }
+
+.volumeicon {
+  position: absolute;
+  height: 2.3vh;
+  width: 2.3vh;
+  margin-left: -3.5vh;
+}
+
+.volume_slider {
+  margin-left: calc(93% - 15vh);
+  width: 30vh;
+  margin-top: -6vh;
+}
+
+.volume_slider .range-slider__range {
+  width: 25vh;
+}
+
+.volume__range {
+  -webkit-appearance: none;
+  width: 25vh;
+  height: 10px;
+  border-radius: 5px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.volume__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #5860FF;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+
+.volume__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #5860FF;
+  cursor: pointer;
+  -moz-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+
+.volume__value {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.volume__value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: '';
+}
+
+::-moz-range-track {
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}

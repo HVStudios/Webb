@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/formular.css">
+    <title>Formulär</title>
+</head>
+<body>
+
+    <div class="leftside">
+        <h1 class="logo">Henkes Web</h1>
+        <h1 class="welcome">Välkommen! Här fyller vi i ett lattjo formulär!</h1>
+    </div>
+    <div class="rightside">
+        <a class="menuitem1" href="#">Hem</a>
+        <a class="menuitem2" href="#">Uppgifter</a>
+        <form name="datForm" onsubmit="validate();return false">
+            <h4 class="namn">Namn:</h4>
+            <input type="text" name="namn" autocomplete="off" id="namn">
+            <h4 id="felnamn"></h4>
+            <h4 class="nummer">Telefonnummer:</h4>
+            <input type="text" name="nummer" autocomplete="off" id="nummer">
+            <h4 id="felnummer"></h4>
+            <h4 class="mail">Epost:</h4>
+            <input type="text" name="mail" autocomplete="off" id="mail">
+            <h4 id="felmail"></h4>
+            <input type="submit" value="Submit" id="button1">
+        </form>
+    </div>
+
+    <script src="../js/formular.js"></script>
+</body>
+</html>

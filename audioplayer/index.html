@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/site.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <title>Work in progress</title>
+</head>
+<body>
+
+    <div class="logodiv">
+
+        <img class="logo" src="img/logo.svg">
+
+    </div>
+
+    <div class="songcard">
+        <h1 class="title"></h1>
+        <h1 class="artistname"></h1>
+    </div>
+
+    <div class="playerwrapper">
+
+        <audio id="sound" src="Music/NyanCat.mp3" type="audio/mp3" oncanplay="songDuration()" ontimeupdate="songDuration()" volume="0.1"></audio>
+
+        <img src="img/nyancat.jpg" id="PlayingImg">
+
+        <h3 id="songname">Nyan Cat</h3>
+
+        <h3 id="artist">Christopher Torres</h3>
+
+        <img src="img/previous.svg" id="prevtrack">
+
+        <div class="playbutton">
+            <img src="img/play.svg" id="playicon">
+        </div>
+
+        <img src="img/next.svg" id="nexttrack">
+
+        <div class="range-slider duration_slider">
+            <div id="current_duration"></div>
+            <input class="range-slider__range" id="YEET" type="range" value="0" min="0" max="100">
+            <div id="total_duration"></div>
+        </div>
+
+        <div class="volume_slider">
+            <img src="img/volume.svg" alt="Volume" class="volumeicon">
+            <input class="volume__range" id="SKRRT" type="range" value="0.1" min="0" max="1" step="0.01">
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

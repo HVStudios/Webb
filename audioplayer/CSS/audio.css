@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+body {
+    margin-top: 0;
+    background: #eceaf5;
+}
+
+.logodiv {
+    display: block;
+    width: 15vh;
+    height: 10vh;
+    margin-top: 2vh;
+    margin-left: 4vh;
+}
+
+.logo {
+    margin-left: 5vh;
+    width: 5vh;
+    height: 5vh;
+}
+
+.logotext {
+    font-size: 2.7vh;
+    color: #5860FF;
+}
+
+.songwrapper {
+    display: inline-block;
+    width: 30vh;
+    height: 70vh;
+    margin-left: calc(33% - 15vh);
+    text-align: center;
+}
+
+.imgwrapper {
+    display: inline-block;
+    margin-left: calc(50% - 15vh);
+    margin-top: 12vh;
+}
+
+.songimg {
+    border-radius: 100%;
+    height: 30vh;
+    width: 30vh;
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.76);
+}
+
+#songname {
+    color: #141414;
+    font-size:  2.3vh;
+    margin-top: 4vh;
+    letter-spacing: 0.25vh;
+}
+
+#songduration {
+    /* color: #141414; */
+    font-size: 1.9vh;
+    margin-top: 3.5vh;
+    letter-spacing: 0.4vh;
+}
+
+#durationslider {
+    margin-top: 3vh;
+    background-color: #d85e5e;
+    height: 1.7vh;
+    width: 30vh;
+    border-radius: 8vh;
+}
+
+input[type="range"] { 
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+input[type="range"]:focus { 
+    border: none;
+    outline: none;
+}
+
+::-webkit-slider-runnable-track {
+    background: #cccccc;
+}
+
+::-webkit-slider-thumb {
+     /* 1 */-webkit-appearance: none;
+    box-shadow: -100vw 0 0 100vw #D48CF9;
+    border: 3px solid black;
+    height: 30px;
+    width: 12px;
+    border-radius: 50px;
+    background: black;
+    cursor: pointer;
+    margin-top: -2.5px;
+    z-index: 2;
+}
+
+::-moz-range-track {
+    height: 40px;
+    background: #ddd;
+}
+
+::-moz-range-thumb {
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    background: #565656;
+    border-radius: 10px;
+    border: none;
+    box-shadow: -100vw 0 0 100vw #D48CF9;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower { 
+    background: #D48CF9;
+}
+
+::-ms-thumb { 
+    background: #fff;
+    border: 2px solid #999;
+    height: 40px;
+    width: 20px;
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: #ddd;
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
+}
