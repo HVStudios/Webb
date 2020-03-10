@@ -53,14 +53,12 @@ a:active {
     grid-template-columns: 8vw min-content auto min-content 5vw min-content 8vw;
     grid-template-areas:
     ". logo . home . projects .";
-    /* overflow: hidden; */
 }
 
 .logo {
     font-size: 2rem;
     grid-area: logo;
     color: var(--contrastColor);
-    /* overflow: hidden; */
     white-space: nowrap;
     margin: auto;
     user-select: none;
@@ -105,7 +103,6 @@ a:active {
 
 .headerTextContainer {
     margin-top: 150px;
-    height: 600px;
     width: 100%;
 }
 
@@ -645,7 +642,6 @@ a:active {
 
     .logo {
         text-align: center;
-        height: 40px;
         top: 10px;
         width: 100%;
     }

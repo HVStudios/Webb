@@ -3,7 +3,8 @@ function setProperty(propertyName, value) {
 }
 
 function resize() {
-    setProperty("--fullHeight", window.innerHeight.toString()+"px");
+    let root = document.documentElement;
+    root.style.setProperty("--FullHeight", window.innerHeight +"px");
 }
 
 function yeeter() {
@@ -32,15 +33,9 @@ function luckyPage() {
     }
 }
 
-function alignLogo() {
-    if (window.matchMedia('(max-width: 585px)').matches == true) {
-        document.querySelector(".logo").style.marginLeft = window.innerWidth / 2 - document.querySelector(".logo").offsetWidth / 2 + "px";
-    }
-}
-
 window.addEventListener("resize", resize);
+window.addEventListener("load", resize);
 window.addEventListener("resize", yeeter);
 window.addEventListener("load", yeeter);
-window.addEventListener("load", alignLogo);
-window.addEventListener("resize", alignLogo);
+
 document.querySelector(".headerButton").addEventListener("click", luckyPage);
