@@ -1,0 +1,4 @@
+#Mon Mar 09 10:26:57 CET 2020
+base.0=C\:\\GitHub\\Webb\\reactNative\\flopp\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
