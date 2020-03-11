@@ -53,14 +53,12 @@ a:active {
     grid-template-columns: 8vw min-content auto min-content 5vw min-content 8vw;
     grid-template-areas:
     ". logo . home . projects .";
-    /* overflow: hidden; */
 }
 
 .logo {
     font-size: 2rem;
     grid-area: logo;
     color: var(--contrastColor);
-    /* overflow: hidden; */
     white-space: nowrap;
     margin: auto;
     user-select: none;
@@ -105,9 +103,7 @@ a:active {
 
 .headerTextContainer {
     margin-top: 150px;
-    height: 600px;
     width: 100%;
-    /* background-color: rgb(255, 100, 100);  */
 }
 
 .headerTitle {
@@ -162,10 +158,9 @@ a:active {
     white-space: nowrap;
     grid-area:btn;
     margin: 0;
-    border-radius: 30px;
-    border: 3px solid var(--Background);
+    border-radius: 5px;
+    border: 3px solid var(--contrastColor);
     background-color: var(--contrastColor);
-    /* position: absolute; */
     padding: 15px 22px;
     transition: 0.2s ease-out;
     color: #FFFFFF;
@@ -175,8 +170,6 @@ a:active {
 
 .headerButton:hover {
     background-color: var(--Background);
-    color: var(--contrastColor);
-    border: 3px solid var(--contrastColor);
 }
 
 .project1bg {
@@ -190,6 +183,7 @@ a:active {
     ". project1img . project1text .";
     padding-top: 200px;
     padding-bottom: 100px;
+    transition: 0.2s ease;
 }
 
 .project1bg::after {
@@ -226,11 +220,16 @@ a:active {
     font-size: 1.3rem;
     opacity: 0.89;
     padding-bottom: 50px;
+    height: max-content;
 }
 
 .project1cta {
+    margin-top: 50px;
     color: #FFFFFF;
     padding: 15px 25px;
+    width: min-content;
+    white-space: nowrap;
+    display: block;
     border: 2px solid #FFFFFF;
     border-radius: 4px;
     cursor: pointer;
@@ -285,6 +284,9 @@ a:active {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s ease;
+    width: min-content;
+    white-space: nowrap;
+    display: block;
 }
 
 .project2cta:hover {
@@ -348,6 +350,9 @@ a:active {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s ease;
+    width: min-content;
+    white-space: nowrap;
+    display: block;
 }
 
 .project3cta:hover {
@@ -398,6 +403,9 @@ a:active {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s ease;
+    width: min-content;
+    white-space: nowrap;
+    display: block;
 }
 
 .project4cta:hover {
@@ -406,7 +414,7 @@ a:active {
 }
 
 .project5bg {
-    background-color: rgb(221, 133, 33);
+    background-color: #6E62C2;
     width: 100%;
     position: relative;
     display: grid;
@@ -461,6 +469,9 @@ a:active {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s ease;
+    width: min-content;
+    white-space: nowrap;
+    display: block;
 }
 
 .project5cta:hover {
@@ -483,6 +494,10 @@ a:active {
         margin-top: 75px;
     }
 
+    .project1cta {
+        margin: auto;
+    }
+
     .project2bg {
         grid-template-columns: auto 80% auto;
         grid-template-rows: min-content min-content;
@@ -495,6 +510,10 @@ a:active {
 
     .project2img {
         margin-top: 75px;
+    }
+
+    .project2cta {
+        margin: auto;
     }
 
     .project3bg {
@@ -511,6 +530,10 @@ a:active {
         margin-top: 75px;
     }
 
+    .project3cta {
+        margin: auto;
+    }
+
     .project4bg {
         grid-template-columns: auto 80% auto;
         grid-template-rows: min-content min-content;
@@ -525,6 +548,10 @@ a:active {
         margin-top: 75px;
     }
 
+    .project4cta {
+        margin: auto;
+    }
+
     .project5bg {
         grid-template-columns: auto 80% auto;
         grid-template-rows: min-content min-content;
@@ -537,6 +564,10 @@ a:active {
 
     .project5img {
         margin-top: 75px;
+    }
+
+    .project5cta {
+        margin: auto;
     }
 }
 
@@ -611,9 +642,8 @@ a:active {
 
     .logo {
         text-align: center;
-        height: 40px;
         top: 10px;
-        position: absolute;
+        width: 100%;
     }
 
     .project2img {
