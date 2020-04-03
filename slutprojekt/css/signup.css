@@ -1,0 +1,24 @@
+:root {
+    --Background: #FFFFFF;
+    --FullHeight: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.logo {
+    margin-top: 35px;
+    margin-left: 75px;
+    width: 18vh;
+    position: absolute;
+}
+
+.leftside {
+    background: linear-gradient(180deg, #0657E4 0%, #70BCF6 100%);
+    width: 50%;
+    height: var(--FullHeight);
+    display: block;
+}
