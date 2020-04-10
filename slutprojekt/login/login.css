@@ -12,7 +12,7 @@
 body {
     height: var(--FullHeight);
     width: 100%;
-    background-image: url(../img/bg5.jpg);
+    background-image: url(../img/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -26,7 +26,7 @@ body {
     width: 250px;
     position: absolute;
     color: #FFFFFF;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: "Montserrat";
     font-weight: 600;
     user-select: none;
@@ -75,13 +75,13 @@ body {
 }
 
 .loginWrapper input:focus {
-    border-bottom: 2px solid #509EF0;
+    border-bottom: 2px solid rgb(45, 140, 241);
     outline: none;
 }
 
 .loginWrapper input::placeholder {
     color: #FFFFFF;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .forgotpsw {
@@ -92,11 +92,11 @@ body {
 }
 
 .forgotpsw:hover {
-    color: #509EF0;
+    color: rgb(45, 140, 241);
 }
 
 #loginbtn {
-    background: #509EF0;
+    background: rgb(45, 140, 241);
     border: none;
     color: #FFFFFF;
     font-size: 1.4rem;
@@ -104,6 +104,8 @@ body {
     border-radius: 15px;
     margin-bottom: 10px;
 }
-@media only screen and (max-width: 750px) {
-    
+@media only screen and (max-width: 400px) {
+    .loginWrapper {
+        padding: 10px 10px;
+    }
 }

@@ -22,7 +22,6 @@ window.onload = (e => {
 
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(async () => {
       return firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-        console.log("Yeet");
         firebase.auth().onAuthStateChanged(user => {
           if (user) {
             location.href = "../index.html";
@@ -39,5 +38,13 @@ window.onload = (e => {
       let errorMessage = error.message;
     })
   });
+
+  var database = firebase.database();
+
+    database.ref().child("Manufacturer").on("value", snapshot => {
+      console.log(snapshot.val())
+    });
+
+    firebase.database().ref().child("Manufacturer").child("Thing_2").set("Meow");
 
 });
