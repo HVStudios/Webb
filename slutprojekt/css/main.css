@@ -1,11 +1,12 @@
 :root {
     --Background: #FFFFFF;
+    --FullHeight: 100vh;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: "Poppins";
+    font-family: "Roboto";
 }
 
 .titlebar {
