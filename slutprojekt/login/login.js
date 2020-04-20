@@ -45,6 +45,16 @@ window.onload = (e => {
       console.log(snapshot.val())
     });
 
-    firebase.database().ref().child("Manufacturer").child("Thing_2").set("Meow");
+    // firebase.database().ref().child("Manufacturer").child("Thing_2").set("Meow");
 
 });
+
+function setProperty(propertyName, value) {
+  document.documentElement.style.setProperty(propertyName, value);
+}
+
+function resize() {
+  setProperty("--fullHeight", window.innerHeight.toString()+"px");
+}
+
+window.addEventListener("resize", resize);
