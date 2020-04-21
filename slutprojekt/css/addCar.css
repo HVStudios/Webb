@@ -1,0 +1,93 @@
+#blurBG {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    backdrop-filter: blur(10px) saturate(75%);
+    background: rgba(20, 20, 20, 0.5);
+    z-index: 2;
+    top: 0;
+}
+
+#addCarContainer {
+    position: absolute;
+    top: 5vh;
+    height: min-content;
+    width: 260px;
+    z-index: 3;
+    background: #FFFFFF;
+    left: calc(50% - 150px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#addCarExit {
+    height: 30px;
+    width: 30px;
+    margin-left: 230px;
+    cursor: pointer;
+}
+
+#addCarContainer h1 {
+    margin-bottom: 12px;
+}
+
+#addCarMake {
+    border: 2px solid rgb(45, 140, 241);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+}
+
+#addCarMake:focus {
+    outline: none;
+}
+
+#addCarModel {
+    border: 2px solid rgb(45, 140, 241);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+}
+
+#addCarModel:focus {
+    outline: none;
+}
+
+#addCarColor {
+    border: 2px solid rgb(45, 140, 241);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+}
+
+#addCarColor:focus {
+    outline: none;
+}
+
+#addCarDate {
+    border: 2px solid rgb(45, 140, 241);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+}
+
+#addCarDate:focus {
+    outline: none;
+}
+
+#addCarBtn {
+    padding: 10px 15px;
+    background: rgb(45, 140, 241);
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: min-content;
+    white-space: nowrap;
+}
