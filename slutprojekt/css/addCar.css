@@ -7,11 +7,12 @@
     background: rgba(20, 20, 20, 0.5);
     z-index: 2;
     top: 0;
+    display: none;
 }
 
 #addCarContainer {
     position: absolute;
-    top: 5vh;
+    top: -450px;
     height: min-content;
     width: 260px;
     z-index: 3;
@@ -22,6 +23,7 @@
     flex-wrap: wrap;
     padding: 20px;
     border-radius: 15px;
+    transition: 0.3s ease-in-out;
 }
 
 #addCarExit {

@@ -12,7 +12,7 @@
     <title>VB Diecast</title>
 </head>
 <body>
-    <div class="titlebar">
+    <div class="titlebar" id="titlebar">
         <span class="logo">VB Diecast</span>
             <div class="sortBy">
                 <select>
@@ -24,8 +24,8 @@
                 </select>
             </div>
         <input type="search" class="search" placeholder="Search for cars">
-        <div class="addContainer">
-            <img src="img/add_blue.svg" class="add">
+        <div id="addContainer" class="addContainer">
+            <img src="img/add_blue.svg" id="add">
         </div>
     
 
@@ -37,8 +37,7 @@
             <input type="text" id="addCarModel" placeholder="Specify the model">
             <input type="text" id="addCarColor" placeholder="Add a color">
             <input type="date" id="addCarDate">
-            <span id="addCarBtn">Add Car</span>
-            <!-- <span>Cancel</span> -->
+            <span id="addCarBtn" placeholder="">Add Car</span>
         </div>
 
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>

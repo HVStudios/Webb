@@ -30,12 +30,10 @@ window.onload = (e => {
           }
         });
       }).catch(error => {
-        let errorCode = error.code;
-        let errorMessage = error.message;
+
       });
     }).catch(function (error) {
-      let errorCode = error.code;
-      let errorMessage = error.message;
+
     })
   });
 
