@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@350;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0ff08a1a17.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('css/dropdown.css');
+        @import url('css/main.css');
+        @import url('css/addCar.css');
+        @import url('css/checkmark.css');
+    </style>
+    <title>VB Diecast</title>
+</head>
+<body>
+    <div class="titlebar" id="titlebar">
+        <span class="logo">VB Diecast</span>
+            <div class="sortBy">
+                <select>
+                    <option>Sort by:</option>
+                    <option>Make</option>
+                    <option>Model</option>
+                    <option>Color</option>
+                    <option>Date purchased</option>
+                </select>
+            </div>
+        <input type="search" class="search" placeholder="Search for cars">
+        <button id="addContainer" class="newAddContainer">New car</button>
+    </div>
+    
+
+    <div id="blurBG"></div>
+        <div id="addCarContainer">
+            <span class="exitContainer">
+                <i class="fas fa-times fa-2x" id="addCarExit"></i>
+            </span>
+            <h1 id="addCarTitle">Add new car</h1>
+            <input type="text" id="addCarMake" placeholder="Specify the make">
+            <input type="text" id="addCarModel" placeholder="Specify the model">
+            <input type="text" id="addCarColor" placeholder="Add a color">
+            <input type="date" id="addCarDate">
+            <label for="addCarImg" class="customUpload">
+                <span class="uploadIconContainer">
+                    <i class="fas fa-upload fa-sm" id="labelImg"></i>
+                </span>
+                <p id="labelText">Choose image</p>
+            </label>
+            <input id="addCarImg" type="file" accept=".apng, .bmp, .gif, .jpeg, .pjpeg, .png, .svg + xml, .tiff, .webp, .jpg"/>
+            <span id="addCarBtn" onclick="addCarFunction()">Add Car</span>
+        </div>
+
+    <div id="loadingContainer">
+        <div id="loading">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+    </div>
+    <div class="checkmark draw" id="checkmark"></div>
+    <p id="addedText">The car has been added</p>
+
+    <div id="carSection"></div>
+    
+
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAVNwYUbfP_LPqW7dK_mQJsQ16aoBkdsHw",
+        authDomain: "vb-diecast.firebaseapp.com",
+        databaseURL: "https://vb-diecast.firebaseio.com",
+        projectId: "vb-diecast",
+        storageBucket: "vb-diecast.appspot.com",
+        messagingSenderId: "817645272702",
+        appId: "1:817645272702:web:4ef6cb715965df4c7fa22f",
+        measurementId: "G-S8LS5QYGSQ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
+    </script>
+
+    <script src="js/index.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/addCar.js"></script>
+    <script src="js/fileUpload.js"></script>
+</body>
+</html>

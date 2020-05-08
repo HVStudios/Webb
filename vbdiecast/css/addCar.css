@@ -1,0 +1,209 @@
+:root {
+    --Background: #EBEBEB;
+    --FullHeight: 100vh;
+    --CardColor: #FFFFFF;
+    --TextColor: #000000;
+    --ContrastColor: rgb(45, 140, 241);
+    --PlaceholderColor: rgba(0, 0, 0, 0.75);
+  }
+  
+  body {
+    font-weight: 400;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --Background: rgb(14, 16, 17);
+          --CardColor: rgb(24, 28, 31);
+          --TextColor: rgba(255, 255, 255, 0.938);
+          --ContrastColor: rgb(26, 109, 197);
+          --PlaceholderColor: rgba(256, 256, 256, 0.75);
+      }
+  
+      body {
+          font-weight: 350;
+      }
+  }
+
+#blurBG {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    backdrop-filter: blur(10px) saturate(75%);
+    background: rgba(20, 20, 20, 0.5);
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+
+#addCarContainer {
+    position: absolute;
+    top: -450px;
+    height: min-content;
+    width: 260px;
+    z-index: 3;
+    background: var(--CardColor);
+    left: calc(50% - 150px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.5s ease;
+    text-align: center;
+    align-items: center;
+    color: var(--TextColor);
+}
+
+.exitContainer {
+    color: var(--TextColor);
+}
+
+#addCarExit {
+    height: 30px;
+    width: 30px;
+    margin-left: 230px;
+    cursor: pointer;
+}
+
+#addCarContainer h1 {
+    margin-bottom: 12px;
+}
+
+#addCarMake {
+    border: 2px solid var(--ContrastColor);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+    height: 16px;
+    background: var(--CardColor);
+    color: var(--TextColor);
+}
+
+#addCarMake:focus {
+    outline: none;
+}
+
+#addCarModel {
+    border: 2px solid var(--ContrastColor);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+    height: 16px;
+    background: var(--CardColor);
+    color: var(--TextColor);
+}
+
+#addCarModel:focus {
+    outline: none;
+}
+
+#addCarColor {
+    border: 2px solid var(--ContrastColor);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+    height: 16px;
+    background: var(--CardColor);
+    color: var(--TextColor);
+}
+
+#addCarColor:focus {
+    outline: none;
+}
+
+#addCarDate {
+    border: 2px solid var(--ContrastColor);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 200px;
+    margin-bottom: 12px;
+    height: 16px;
+    background: var(--CardColor);
+    color: var(--TextColor);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#addCarDate:focus {
+    outline: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.customDate {
+    border: 2px solid var(--ContrastColor);
+    display: flex;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    color: #000000c4;
+    font-size: 1em;
+    align-items: center;
+    background: var(--CardColor);
+}
+
+.customUpload {
+    border: 2px solid var(--ContrastColor);
+    display: flex;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    color: var(--PlaceholderColor);
+    font-size: 1em;
+    align-items: center;
+    background: var(--CardColor);
+}
+
+.customUpload i {
+    color: var(--TextColor);
+    margin-right: 10px;
+    opacity: 0.75;
+}
+
+input::placeholder {
+    color: var(--PlaceholderColor);
+}
+
+#addCarBtn {
+    padding: 10px 25px;
+    background: var(--ContrastColor);
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: min-content;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: auto;
+    font-size: 1.5em;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased; 
+    transition: 0.2s ease;
+}
+
+#addCarBtn:hover {
+    transform: scale(1.048);
+}
+
+#addedText {
+    position: absolute;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 22px;
+    z-index: 3;
+    display: none;
+    top: 560px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <title>VB Diecast</title>
+</head>
+<body>
+
+    <!-- Test account: Username: test.account@mail.com Password: 123456789 -->
+
+    <span class="logo">VB Diecast</span>
+
+    <div id="loginWrapper">
+        <p class="titleText"><span class="title">Hello!</span><br>Log in to your account</p>
+        <input type="text" id="usrname" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()" id="loginBtn">Log in</button>
+        <p id="forgotpsw">Forgot password?</p>
+        <a class="noLogin" href="../index.html">Continue without login</a>
+    </div>
+    <div id="forgotPasswordWrapper">
+        <p class="forgotTitle">Forgot password?</p>
+        <p class="forgotTitleText">Enter your email to reset password</p>
+        <input type="text" id="email" placeholder="Email">
+        <span id="forgotBtn">Reset my password</span>
+        <p id="forgotSuccess"></p>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAVNwYUbfP_LPqW7dK_mQJsQ16aoBkdsHw",
+        authDomain: "vb-diecast.firebaseapp.com",
+        databaseURL: "https://vb-diecast.firebaseio.com",
+        projectId: "vb-diecast",
+        storageBucket: "vb-diecast.appspot.com",
+        messagingSenderId: "817645272702",
+        appId: "1:817645272702:web:4ef6cb715965df4c7fa22f",
+        measurementId: "G-S8LS5QYGSQ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
+    </script>
+
+    <script src="login.js"></script>
+</body>
+</html>

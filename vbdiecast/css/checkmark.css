@@ -1,0 +1,48 @@
+.checkmark {
+    display: none;
+  }
+
+  .checkmark.draw:after {
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+  }
+
+  .checkmark:after {
+    left: calc(50% - 25px);
+    text-align: center;
+    opacity: 1;
+    height: 75px;
+    width: 25px;
+    transform-origin: left top;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #ffffff;
+    content: "";
+    z-index: 3;
+    position: absolute;
+    top: 500px;
+  }
+
+  @keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: 25px;
+      opacity: 1;
+    }
+    40% {
+      height: 75px;
+      width: 25px;
+      opacity: 1;
+    }
+    100% {
+      height: 75px;
+      width: 25px;
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,86 @@
+:root {
+  --Background: #EBEBEB;
+  --FullHeight: 100vh;
+  --CardColor: #FFFFFF;
+  --TextColor: #000000;
+  --ContrastColor: rgb(45, 140, 241);
+}
+
+body {
+  font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --Background: rgb(14, 16, 17);
+        --CardColor: rgb(24, 28, 31);
+        --TextColor: rgba(255, 255, 255, 0.938);
+        --ContrastColor: rgb(26, 109, 197);
+    }
+
+    body {
+        font-weight: 350;
+    }
+}
+
+.sortBy {
+    grid-area: sort;
+    height: 35px;
+    position: relative;
+    border-radius: 5px;
+    width: 175px;
+  }
+  
+  .sortBy select {
+    display: none;
+  }
+  
+  .select-selected {
+    border-radius: 5px;
+    background-color: var(--ContrastColor);
+  }
+  
+
+  .select-selected:after {
+    border: 2px solid var(--ContrastColor);
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  .select-items {
+    border-radius: 5px;
+    position: absolute;
+    background-color: var(--ContrastColor);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
