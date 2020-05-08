@@ -1,61 +1,76 @@
+:root {
+  --Background: #EBEBEB;
+  --FullHeight: 100vh;
+  --CardColor: #FFFFFF;
+  --TextColor: #000000;
+  --ContrastColor: rgb(45, 140, 241);
+}
+
+body {
+  font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --Background: rgb(14, 16, 17);
+        --CardColor: rgb(24, 28, 31);
+        --TextColor: rgba(255, 255, 255, 0.938);
+        --ContrastColor: rgb(26, 109, 197);
+    }
+
+    body {
+        font-weight: 350;
+    }
+}
+
 .sortBy {
     grid-area: sort;
-    height: 35px;
+    height: 40px;
     position: relative;
-    border-radius: 5px;
     width: 175px;
   }
-  
-  .sortBy select {
-    display: none;
-  }
-  
-  .select-selected {
-    border-radius: 5px;
-    background-color: rgb(45, 140, 241);
-  }
-  
 
-  .select-selected:after {
-    border: 2px solid rgb(45, 140, 241);
-    border-radius: 5px;
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-  }
-  
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-  }
+.sortBy select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 9.5px 5px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  background: var(--Background);
+  color: var(--TextColor);
+  border: 2px solid var(--ContrastColor);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 14px;
+}
 
-  .select-items div,.select-selected {
-    color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-  }
-  
-  .select-items {
-    border-radius: 5px;
-    position: absolute;
-    background-color: rgb(45, 140, 241);
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
+.sortBy select::-ms-expand {
+  display: none;
+}
 
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+.sortBy select:hover,
+.sortBy select:focus {
+  background: var(--Background);
+  color: var(--TextColor);
+}
+
+.sortBy select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.sortBy__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: var(--TextColor) transparent transparent transparent;
+  transition: 0.1s ease-in-out;
+}

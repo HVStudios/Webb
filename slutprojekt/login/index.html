@@ -15,13 +15,20 @@
 
     <span class="logo">VB Diecast</span>
 
-    <div class="loginWrapper">
+    <div id="loginWrapper">
         <p class="titleText"><span class="title">Hello!</span><br>Log in to your account</p>
         <input type="text" id="usrname" placeholder="Email">
         <input type="password" id="password" placeholder="Password">
-        <button onclick="login()" id="loginbtn">Log in</button>
-        <p class="forgotpsw">Forgot password?</p>
+        <button onclick="login()" id="loginBtn">Log in</button>
+        <p id="forgotpsw">Forgot password?</p>
         <a class="noLogin" href="../index.html">Continue without login</a>
+    </div>
+    <div id="forgotPasswordWrapper">
+        <p class="forgotTitle">Forgot password?</p>
+        <p class="forgotTitleText">Enter your email to reset password</p>
+        <input type="text" id="email" placeholder="Email">
+        <span id="forgotBtn">Reset my password</span>
+        <p id="forgotSuccess"></p>
     </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->

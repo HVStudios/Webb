@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto";
+    overflow: hidden;
 }
 
 body {
@@ -16,7 +17,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: grid;
     justify-content: center;
 }
 
@@ -32,33 +32,21 @@ body {
     user-select: none;
 }
 
-.loginWrapper {
-    position: relative;
+#loginWrapper {
+    position: absolute;
     color: #FFFFFF;
     backdrop-filter: blur(10px) saturate(45%);
     border-radius: 30px;
     padding: 30px 60px;
-    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
     height: min-content;
-    width: min-content;
-    display: grid;
-    grid-template-columns: 250px;
-    grid-template-rows: min-content 35px 35px 70px min-content min-content;
-    row-gap: 25px;
-    grid-template-areas:
-    "title"
-    "username"
-    "password"
-    "Loginbtn"
-    "forgotPassword"
-    "noLogin";
+    display: flex;
+    width: 250px;
+    flex-direction: column;
     text-align: center;
-}
-
-.titleText {
-    font-weight: 500;
-    font-size: 1.4rem;
-    grid-area: "title";
+    transition: 0.4s ease;
 }
 
 .title {
@@ -66,30 +54,39 @@ body {
     font-weight: 700;
 }
 
-.loginWrapper input {
+.titleText {
+    font-weight: 500;
+    font-size: 1.4rem;
+    grid-area: "title";
+    margin-bottom: 25px;
+}
+
+#loginWrapper input {
     color: #FFFFFF;
     font-size: 1rem;
     border: none;
     background: none;
     border-bottom: 2px solid #FFFFFF;
     transition: 0.1s ease-in-out;
+    margin-bottom: 25px;
 }
 
-.loginWrapper input:focus {
+#loginWrapper input:focus {
     border-bottom: 2px solid rgb(45, 140, 241);
     outline: none;
 }
 
-.loginWrapper input::placeholder {
+#loginWrapper input::placeholder {
     color: #FFFFFF;
     opacity: 0.9;
 }
 
-.forgotpsw {
+#forgotpsw {
     font-size: 1.1rem;
     text-decoration: underline;
     cursor: pointer;
     transition: 0.1s ease-in-out;
+    margin-bottom: 25px;
 }
 
 .forgotpsw:hover {
@@ -108,7 +105,80 @@ body {
     color: rgb(45, 140, 241);
 }
 
-#loginbtn {
+#loginBtn {
+    background: rgb(45, 140, 241);
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 10px 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased; 
+    transition: 0.2s ease;
+}
+
+#loginBtn:hover {
+    transform: scale(1.048);
+}
+
+@media only screen and (max-width: 400px) {
+    .loginWrapper {
+        padding: 10px 10px;
+    }
+}
+
+#forgotPasswordWrapper {
+    right: -500px;
+    position: absolute;
+    color: #FFFFFF;
+    backdrop-filter: blur(10px) saturate(45%);
+    border-radius: 30px;
+    padding: 30px 60px;
+    transform: translate(50%, -50%);
+    top: 50%;
+    height: min-content;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    text-align: left;
+    transition: 0.4s ease;
+}
+
+.forgotTitle {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.forgotTitleText {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+#forgotPasswordWrapper input {
+    color: #FFFFFF;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #FFFFFF;
+    transition: 0.1s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#forgotPasswordWrapper input:focus {
+    border-bottom: 2px solid rgb(45, 140, 241);
+    outline: none;
+}
+
+#forgotPasswordWrapper input::placeholder {
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+#forgotBtn {
     background: rgb(45, 140, 241);
     border: none;
     color: #FFFFFF;
@@ -116,9 +186,16 @@ body {
     cursor: pointer;
     border-radius: 15px;
     margin-bottom: 10px;
+    padding: 10px 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased; 
+    transition: 0.2s ease;
 }
-@media only screen and (max-width: 400px) {
-    .loginWrapper {
-        padding: 10px 10px;
-    }
+
+#forgotBtn:hover {
+    transform: scale(1.048);
+}
+
+#forgotSuccess {
+    font-size: 1rem;
 }

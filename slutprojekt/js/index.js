@@ -10,7 +10,6 @@ window.onload = () => {
     firebase.auth().onAuthStateChanged(user => {
         if (user == null) {
             
-            document.getElementById("add").style.display = "none";
             document.getElementById("addContainer").style.display = "none";
 
             var loginBtn = document.createElement("a");
@@ -18,7 +17,7 @@ window.onload = () => {
             document.getElementById("titlebar").appendChild(loginBtn);
             loginBtn.innerHTML = "Log in";
             loginBtn.classList.add("loginBtn");
-            loginBtn.href = "../login"
+            loginBtn.href = "login";
         }
     })};
 
